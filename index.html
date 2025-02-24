@@ -14,7 +14,17 @@
 
 <body>
     <div id="sidebar-container">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch("/layout/sidebar.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById("sidebar-container").innerHTML = data;
+                    })
+                    .catch(error => console.error("Lỗi khi tải sidebar:", error));
+            });
 
+        </script>
     </div>
 
 
