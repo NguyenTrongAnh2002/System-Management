@@ -1,13 +1,13 @@
 
 // gọi thanh nav
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("/layout/sidebar.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("sidebar-container").innerHTML = data;
-        })
-        .catch(error => console.error("Lỗi khi tải sidebar:", error));
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     fetch("/layout/sidebar.html")
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById("sidebar-container").innerHTML = data;
+//         })
+//         .catch(error => console.error("Lỗi khi tải sidebar:", error));
+// });
 
 
 // thiết lập ô check-box all
