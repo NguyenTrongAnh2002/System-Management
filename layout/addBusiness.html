@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,11 +10,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/sidebarStyle.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Ship the Order</title>
+    <title>Add Business</title>
 </head>
 
 <body>
-
     <div id="sidebar-container">
         <div class="sidebar">
             <div class="logo">
@@ -84,39 +84,70 @@
 
     </div>
     <div id="main">
-        <div class="container-shipOrder">
-            <h2>Ship the Orders</h2>
-            <div class="step">
-                <div class="step-number active">1</div>
-                <div class="step-content">
-                    <h3>Select package type</h3>
-                    <p>Choose the appropriate packaging for your order.</p>
-                    <div class="package-options">
-                        <button class="package-btn active"><i class="fa-solid fa-box"></i>
-                            <p>Box Package</p>
-                        </button>
-                        <button class="package-btn"><i class="fa-solid fa-bag-shopping"></i>
-                            <p>Soft Package</p>
-                        </button>
-                    </div>
-                </div>
+        <div class="title">
+            <div class="title-text">
+                <h2><a href="../layout/business.html"><i class="fa-solid fa-arrow-left"></i> </a>Add new business</h2>
             </div>
+        </div>
 
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Scan/Enter Order ID</h3>
-                    <p>Identify the order by scanning or manually entering the Order ID.</p>
+        <div class="container-style" contenteditable="true">
+            <h2 class="title">Business Overview</h2>
+            <div class="box">
+                <div class="item">
+                    <label for="" class="required-label"> Business name</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="" class="required-label">Business email</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="" class="required-label"> Business phone number</label>
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 </div>
             </div>
-
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Package Dimension & Weight</h3>
-                    <p>Input the dimensions and weight of your package for accurate calculation.</p>
+        </div>
+        <div class="container-style" contenteditable="true">
+            <h2 class="title">Business Address</h2>
+            <div class="box">
+                <div class="item">
+                    <label for="" class="required-label"> Street address</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="" class="required-label">Ward</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="" class="required-label">District</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="" class="required-label"> City</label>
+                    <select name="" id="">
+                        <option value="1">select</option>
+                        <option value="3">select</option>
+                        <option value="3">select</option>
+                    </select>
                 </div>
             </div>
+        </div>
+        <div class="container-style" contenteditable="true">
+            <h2 class="title">Business Information</h2>
+            <div class="box">
+                <div class="item">
+                    <label for=""> Selling website</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for=""> Order per month</label>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="button-footer">
+            <button class="button1">Discard</button>
+            <button class="button2">Save</button>
         </div>
     </div>
     <script src="../assets/js/app.js"></script>

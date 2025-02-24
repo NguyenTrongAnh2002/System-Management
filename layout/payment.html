@@ -6,10 +6,306 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sidebarStyle.css">
 </head>
 
 <body>
+    <div id="sidebar-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bars"></i>
+                <span>TRENDLOGICORP</span>
+            </div>
 
+            <ul class="sidebar-nav">
+                <li class="nav-item">
+                    <a href="../index.html">
+                        <i class="fa-solid fa-gauge"></i>
+                        <span>Dashboard</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/oder.html">
+                        <i class="fa-brands fa-first-order"></i>
+                        <span>Order Management</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/shipOrder.html">
+                        <i class="fa-solid fa-house-chimney-crack"></i>
+                        <span>Ship the Order</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span> Shipping Price Management</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/payment.html">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <span>Payments</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/business.html">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Business Management</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/customer.html">
+                        <i class="fa-solid fa-user-secret"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/message.html">
+                        <i class="fa-solid fa-message"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="../layout/user.html">
+                        <i class="fa-solid fa-user"></i>
+                        <span> User Management</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="user">
+                <i class="fa-regular fa-user"></i>
+                <span>Trong Anh</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="main">
+
+        <div class="title">
+            <div class="title-text">
+                <h2>Payments</h2>
+            </div>
+            <div class="title-box">
+                <a href="../layout/add_payment.html">
+                    <div class="title-button">
+                        <button class="button-order">Add New Payment </button>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="chart">
+            <div class="chart-top">
+                <div class="chart-total">
+                    <p style="font-size: 15px;padding-top: 5px;">Total Volume</p>
+                    <p class="number">$2,680</p>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="chart-active">
+                    <p style="font-size: 15px;padding-top: 5px;">Successful</p>
+                    <p class="number">$12,500</p>
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <div class="chart-order">
+                    <p style="font-size: 15px;padding-top: 5px;"> Pending</p>
+                    <p class="number">151</p>
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <div class="chart-order">
+                    <p style="font-size: 15px;padding-top: 5px;"> Refunded</p>
+                    <p class="number">$3,456</p>
+                    <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="content">
+            <div class="content-input">
+                <div class="input-search">
+                    <input type="text" id="searchInput"
+                        placeholder=" Search payment by User ID, User Name, Order ID or Transaction ID"
+                        onkeyup="filterTable()">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="input-button">
+                    <div class="button-filter">
+                        <button><i class="fa-solid fa-filter"></i>Filter</button>
+                    </div>
+                    <div class="button-column">
+                        <button><i class="fa-solid fa-table-columns"></i>Column</button>
+                    </div>
+                    <div class="button-export">
+                        <button><i class="fa-solid fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-table">
+                <table>
+                    <tr>
+                        <th><input type="checkbox" id="checkAll"></th>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Order ID</th>
+                        <th>Order Date</th>
+                        <th>Transaction ID</th>
+                        <th>Shipping Amount</th>
+                        <th>Status</th>
+                        <th>Payment Date</th>
+                        <th>Paid at</th>
+                        <th>Actinon</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>EP240903592292899801</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1001</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Successful</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1002</td>
+                        <td>Jane Smith</td>
+                        <td>EP240903522711353349</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1002</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Pending</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1003</td>
+                        <td> Michael Johnson</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1003</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Refund</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1004</td>
+                        <td>Emily Davis</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1004</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Pending</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1005</td>
+                        <td>William Brown</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1005</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Successful</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1006</td>
+                        <td>Olivia Wilson</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1006</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Pending</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1007</td>
+                        <td>James Martinez</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1007</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Successful</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1008</td>
+                        <td>Sophia Anderson</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1008</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Successful</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1009</td>
+                        <td>Daniel Lee</td>
+                        <td>EP240903551663044377</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>T1009</td>
+                        <td>$12.50</td>
+                        <td class="status-payment"><span>Refund</span></td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td><a href="../layout/add_payment.html" style="color: #009298;"><span>Edit</span></a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="content-footer">
+                <div class="footer-text">
+                    <p>Total 35 item</p>
+                </div>
+                <div class="footer-button">
+                    <button class="footer-button-1">10 / page <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="footer-button-2"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="footer-button-3">1</button>
+                    <span>of 4</span>
+                    <button class="footer-button-4"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../assets/js/app.js"></script>
 </body>
 
 </html>

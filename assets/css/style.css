@@ -411,7 +411,7 @@ td {
 }
 
 /* phần ship order */
-.container {
+.container-shipOrder {
     width: 60%;
     background: white;
     padding: 20px;
@@ -471,4 +471,79 @@ h2 {
     border-color: #ff6b6b;
     background: #ff6b6b;
     color: white;
+}
+
+/* phần payment */
+.container-style {
+    position: relative;
+    width: 700px;
+    margin: auto auto 20px auto;
+    border: 1px solid black;
+}
+
+.container-style .title {
+    margin: 15px;
+}
+
+.container-style .box {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.container-style .item {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-style label,
+input,
+select {
+    margin: 5px 10px;
+}
+
+.container-style .required-label::after {
+    content: " *";
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.container-style input,
+select {
+    width: 300px;
+    height: 30px;
+}
+
+.container-style .button {
+    text-align: right;
+    margin: 10px 20px;
+}
+
+.container-style button {
+    height: 25px;
+    cursor: pointer;
+}
+
+.container-style .button2 {
+    background-color: red;
+    border: none;
+}
+
+.button-footer {
+    width: 100%;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.button-footer button {
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.button-footer .button2 {
+    background-color: red;
+    border: none;
 }
