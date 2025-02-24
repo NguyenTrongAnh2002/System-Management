@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/sidebarStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Order Management</title>
+</head>
+
+<body>
+    <div id="sidebar-container">
+
+    </div>
+    <div id="main">
+        <div class="title">
+            <div class="title-text">
+                <h2>Order Management</h2>
+            </div>
+            <div class="title-button">
+                <button class="button-order">Update Tracking Number</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-input">
+                <div class="input-search">
+                    <input type="text" id="searchInput" placeholder="Search orders by User ID, User name"
+                        onkeyup="filterTable()">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="input-button">
+                    <div class="button-filter">
+                        <button><i class="fa-solid fa-filter"></i>Filter</button>
+                    </div>
+                    <div class="button-column">
+                        <button><i class="fa-solid fa-table-columns"></i>Column</button>
+                    </div>
+                    <div class="button-export">
+                        <button><i class="fa-solid fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-table">
+                <table>
+                    <tr>
+                        <th><input type="checkbox" id="checkAll"></th>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Total Orders Uploaded</th>
+                        <th> Date of Upload</th>
+                        <th>Download Status</th>
+                        <th>Tracking Status</th>
+                        <th>Order Tracking</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>15</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Has Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1002</td>
+                        <td>Jane Smith</td>
+                        <td>12</td>
+                        <td>sep 6, 2024, 11:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Has Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1003</td>
+                        <td> Michael Johnson</td>
+                        <td>8</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Has Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1004</td>
+                        <td>Emily Davis</td>
+                        <td>10</td>
+                        <td>sep 8, 2024, 09:22:06 PM</td>
+                        <td class="status-dowload"><span>Not Dowloaded</span></td>
+                        <td class="status-tracking"><span>No Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1005</td>
+                        <td>William Brown</td>
+                        <td>20</td>
+                        <td>sep 8, 2024, 09:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1006</td>
+                        <td>Olivia Wilson</td>
+                        <td>21</td>
+                        <td>sep 3, 2024, 15:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Has Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1007</td>
+                        <td>James Martinez</td>
+                        <td>17</td>
+                        <td>sep 6, 2024, 11:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Has Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1008</td>
+                        <td>Sophia Anderson</td>
+                        <td>4</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>No Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1009</td>
+                        <td>Daniel Lee</td>
+                        <td>10</td>
+                        <td>sep 8, 2024, 09:22:06 PM</td>
+                        <td class="status-dowload"><span>Not Dowloaded</span></td>
+                        <td class="status-tracking"><span>No Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1010</td>
+                        <td>Isabella Thompson</td>
+                        <td>16</td>
+                        <td>sep 8, 2024, 09:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>1011</td>
+                        <td>Robert Taylor</td>
+                        <td>25</td>
+                        <td>sep 8, 2024, 09:22:06 PM</td>
+                        <td class="status-dowload"><span>Dowloaded</span></td>
+                        <td class="status-tracking"><span>Tracking</span></td>
+                        <td class="status-order"><a href="/layout/orderTracking.html"><span>View Tracking</span></a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="content-footer">
+                <div class="footer-text">
+                    <p>Total 35 item</p>
+                </div>
+                <div class="footer-button">
+                    <button class="footer-button-1">10 / page <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="footer-button-2"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="footer-button-3">1</button>
+                    <span>of 4</span>
+                    <button class="footer-button-4"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

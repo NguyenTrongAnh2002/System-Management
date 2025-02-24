@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/sidebarStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Order Tracking</title>
+</head>
+
+<body>
+    <div id="sidebar-container">
+
+    </div>
+    <div id="main">
+        <div class="title">
+            <div class="title-text">
+                <h2><a href="oder.html"><i class="fa-solid fa-arrow-left"></i> </a>Order Tracking</h2>
+            </div>
+            <div class="title-button">
+                <button class="button1"> Import Ordes</button>
+                <button class="button2">Download Orders</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-input">
+                <div class="input-search">
+                    <input type="text" id="searchInput" placeholder="Search orders by User ID, User name"
+                        onkeyup="filterTable()">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="input-button">
+                    <div class="button-filter">
+                        <button><i class="fa-solid fa-filter"></i>Filter</button>
+                    </div>
+                    <div class="button-column">
+                        <button><i class="fa-solid fa-table-columns"></i>Column</button>
+                    </div>
+                    <div class="button-export">
+                        <button><i class="fa-solid fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content-table">
+                <table>
+                    <tr>
+                        <th><input type="checkbox" id="checkAll"></th>
+                        <th>Tracking ID</th>
+                        <th>Order ID</th>
+                        <th>Total Orders Uploaded</th>
+                        <th> Order Date</th>
+                        <th> Shipping Address</th>
+                        <th>Total Amount</th>
+                        <th>Delivery Status</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>TRK123456789US</td>
+                        <td>1001</td>
+                        <td>John Doe</td>
+                        <td>sep 5, 2024, 12:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$150.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>AZ5678DFG9P21</td>
+                        <td>1002</td>
+                        <td>Jane Smith</td>
+                        <td>sep 6, 2024, 11:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$200.00</td>
+                        <td class="status-delivey"><span>Shipped</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>TRK123456789US</td>
+                        <td>1003</td>
+                        <td> Michael Johnson</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$75.00</td>
+                        <td class="status-delivey"><span>Processing</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td> LX223344556US</td>
+                        <td>1004</td>
+                        <td>Emily Davis</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$300.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>PKG987654321US</td>
+                        <td>1005</td>
+                        <td>William Brown</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$50.00</td>
+                        <td class="status-delivey">Canceled</td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>SHIP003248759</td>
+                        <td>1006</td>
+                        <td>Olivia Wilson</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$180.00</td>
+                        <td class="status-delivey"><span>Shipped</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>JH768392187US</td>
+                        <td>1007</td>
+                        <td>James Martinez</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$120.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>TCK892374829DE</td>
+                        <td>1008</td>
+                        <td>Sophia Anderson</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$145.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>LN456789123CN</td>
+                        <td>1009</td>
+                        <td>Daniel Lee</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$145.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>EFX203948567JP</td>
+                        <td>1010</td>
+                        <td>Isabella Thompson</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$145.00</td>
+                        <td class="status-delivey"><span>Shipped</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkItem"></td>
+                        <td>GM5678932148DK</td>
+                        <td>1011</td>
+                        <td>Robert Taylor</td>
+                        <td>sep 7, 2024, 10:22:06 PM</td>
+                        <td>44 Center Grove Rd,Randolph,New Jersey,07869</td>
+                        <td>$145.00</td>
+                        <td class="status-delivey"><span>Delivered</span></td>
+                        <td><a href="" style="color: #009298;">View</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="content-footer">
+                <div class="footer-text">
+                    <p>Total 35 item</p>
+                </div>
+                <div class="footer-button">
+                    <button class="footer-button-1">10 / page <i class="fa-solid fa-chevron-down"></i></button>
+                    <button class="footer-button-2"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="footer-button-3">1</button>
+                    <span>of 4</span>
+                    <button class="footer-button-4"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
